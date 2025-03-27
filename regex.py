@@ -80,7 +80,9 @@ def afficher_resultats(regex, tests):
         result = "✓" if reg_compare(regex, test) else "✗"
         print(f"{test.ljust(15)} {result}")
 
-# Exemple d'utilisation
-regex = "[A-Z]a{1,3}(1|2)+[0-9]"
-tests = ["Xa211", "Yaaa222", "Za1", "Baaaa3", "Ca21", "Da1111"]
-afficher_resultats(regex, tests)
+
+if __name__ == "__main__":
+    # Exemple d'utilisation
+    regex = "[A-Z]a{1,3}(1|2)+[0-9]"
+    tests = ["Xa211", "Yaaa222", "Za1", "Baaaa3", "Ca21", "Da1111"]
+    afficher_resultats(regex, tests)
